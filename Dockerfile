@@ -32,8 +32,8 @@ RUN curl -fsSL https://deb.nodesource.com/setup_20.x | bash - \
 RUN npm install && npm run build
 
 # Ensure SQLite database file exists and is writable
-RUN touch database/database.sqlite \
-    && chmod 777 database/database.sqlite
+RUN touch /var/www/html/database/database.sqlite \
+    && chmod 777 /var/www/html/database/database.sqlite
 
 # Set correct permissions for Laravel storage
 RUN chmod -R 775 storage bootstrap/cache
