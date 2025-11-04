@@ -17,7 +17,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
     <!-- Tailwind CSS via Vite (with fallback if manifest is missing) -->
-    @php $hasVite = file_exists(public_path('build/manifest.json')); @endphp
+    @php
+        $viteManifestV4 = public_path('build/manifest.json');
+        $viteManifestV5 = public_path('build/.vite/manifest.json');
+        $hasVite = file_exists($viteManifestV4) || file_exists($viteManifestV5);
+    @endphp
     @if ($hasVite)
         @vite('resources/css/app.css')
     @else
