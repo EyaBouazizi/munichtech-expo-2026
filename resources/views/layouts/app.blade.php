@@ -18,9 +18,8 @@
 
     <!-- Tailwind CSS via Vite (with fallback if manifest is missing) -->
     @php
-        $viteManifestV4 = public_path('build/manifest.json');
-        $viteManifestV5 = public_path('build/.vite/manifest.json');
-        $hasVite = file_exists($viteManifestV4) || file_exists($viteManifestV5);
+        // Laravel Vite expects manifest at public/build/manifest.json
+        $hasVite = file_exists(public_path('build/manifest.json'));
     @endphp
     @if ($hasVite)
         @vite('resources/css/app.css')
