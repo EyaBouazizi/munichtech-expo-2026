@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: munichtech-expo-2026
+    env: php
+    buildCommand: composer install --no-dev --optimize-autoloader && npm ci && npm run build
+    startCommand: php artisan serve --host=0.0.0.0 --port=$PORT
+    envVars:
+      - key: APP_ENV
+        value: production
+      - key: APP_DEBUG
+        value: false
+      - key: LOG_CHANNEL
+        value: stderr
+      - key: LOG_LEVEL
+        value: error
+    healthCheckPath: /
+
+databases:
+  - name: munichtech-expo-db
+    databaseName: munichtech_expo
+    user: munichtech_user
+    plan: free
+
