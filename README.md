@@ -83,6 +83,18 @@ DB_DATABASE=/data/database.sqlite
 
 bash -lc "touch /data/database.sqlite && php artisan migrate --force && (php artisan storage:link || true) && php -S 0.0.0.0:$PORT -t public"
 
+## Time Spent & Assumptions
+
+-   Total time spent: ~9 hours
+-   Assumptions:
+    -   Using Railway for free hosting with SQLite for simplicity.
+    -   Tailwind CDN is used for styling in production; some colors may not appear fully.
+
+## Form Functionality
+
+-   Ticket form: fully functional, saves data to the `tickets` table in the database.
+-   Other forms (e.g., contact, registration): currently show front-end confirmation but do not persist data in the database.
+
 ## Notes
 
 Tailwind CSS CDN warning may appear in the browser console in production. To fix, install Tailwind as a PostCSS plugin or via the Tailwind CLI.
