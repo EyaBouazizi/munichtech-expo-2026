@@ -21,7 +21,15 @@
     @if ($hasVite)
         @vite('resources/css/app.css')
     @else
-        <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+  window.tailwind = window.tailwind || {};
+  tailwind.config = {
+    theme: { extend: { colors: {
+      primary: { 600: '#2563eb' } 
+    }}}
+  };
+</script>
+<script src="https://cdn.tailwindcss.com"></script>
     @endif
 </head>
 <body class="font-sans antialiased bg-gray-50">
