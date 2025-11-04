@@ -4,7 +4,7 @@ FROM php:8.3-apache
 # Install system dependencies
 RUN apt-get update && apt-get install -y \
     git curl zip unzip libpng-dev libonig-dev libxml2-dev libzip-dev \
-    && docker-php-ext-install pdo_mysql mbstring exif pcntl bcmath gd zip
+    && docker-php-ext-install pdo_mysql pdo_sqlite mbstring exif pcntl bcmath gd zip
 
 # Enable Apache mod_rewrite
 RUN a2enmod rewrite
@@ -30,7 +30,12 @@ RUN curl -fsSL https://deb.nodesource.com/setup_20.x | bash - \
 # Build frontend assets
 RUN npm install && npm run build
 
-# Set correct permissions for Laravel storage
+# Create SQLite database file if it doesn't exist
+RUN mkdir -p /var/www/html/database \
+    && touch /var/www/html/database/database.sqlite \
+    && chmod 777 /var/www/html/database/database.sqlite
+
+# Set correct permissions for Laravel storage and cache
 RUN chmod -R 775 storage bootstrap/cache
 
 # Copy environment file if not present
@@ -38,6 +43,11 @@ RUN if [ ! -f .env ]; then cp .env.example .env; fi
 
 # Generate application key
 RUN php artisan key:generate
+
+# Cache configs, routes, views (optional, speeds up Laravel)
+RUN php artisan config:cache
+RUN php artisan route:cache
+RUN php artisan view:cache
 
 # ✅ Set Apache DocumentRoot to Laravel public folder
 RUN sed -i 's|/var/www/html|/var/www/html/public|g' /etc/apache2/sites-available/000-default.conf
