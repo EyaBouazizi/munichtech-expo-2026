@@ -145,13 +145,13 @@
         <h2 class="text-3xl md:text-4xl font-bold mb-4">Ready to Join Us?</h2>
         <p class="text-xl mb-8 opacity-95">Be part of Europe's most exciting tech event in 2026</p>
         <div class="flex flex-wrap justify-center gap-4">
-            <a href="{{ route('tickets.page') }}" class="btn bg-white text-primary-600 hover:bg-gray-100 px-8 py-4 text-lg">
+            <a href="{{ route('tickets.page') }}" class="btn bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 text-lg font-semibold rounded-lg transition">
                 Get Your Tickets
             </a>
-            <a href="{{ route('speakers') }}" class="btn btn-outline px-8 py-4 text-lg">
+            <a href="{{ route('speakers') }}" class="btn bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 text-lg font-semibold rounded-lg transition">
                 Apply as Speaker
             </a>
-            <a href="{{ route('sponsors') }}" class="btn btn-outline px-8 py-4 text-lg">
+            <a href="{{ route('sponsors') }}" class="btn bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 text-lg font-semibold rounded-lg transition">
                 Become a Sponsor
             </a>
         </div>

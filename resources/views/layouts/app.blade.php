@@ -35,7 +35,7 @@
 <script src="https://cdn.tailwindcss.com"></script>
     @endif
 </head>
-<body class="font-sans antialiased bg-sky-200">
+<body class="font-sans antialiased bg-blue-600">
 
     <!-- Header -->
     @include('partials.header')
