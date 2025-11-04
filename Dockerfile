@@ -18,7 +18,10 @@ COPY . .
 
 # Install Laravel dependencies & build Tailwind
 RUN composer install --no-dev --optimize-autoloader
-RUN npm install && npm run build
+
+# Install Node dependencies and build Tailwind CSS/Vite assets
+RUN npm install
+RUN npm run build
 
 # Expose port
 EXPOSE 9000
