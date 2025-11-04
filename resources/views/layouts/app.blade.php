@@ -16,8 +16,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-    <!-- Tailwind CSS via Vite -->
-    @vite('resources/css/app.css')
+    <!-- Tailwind CSS via Vite (with fallback if manifest is missing) -->
+    @php $hasVite = file_exists(public_path('build/manifest.json')); @endphp
+    @if ($hasVite)
+        @vite('resources/css/app.css')
+    @else
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.13/dist/tailwind.min.css" />
+    @endif
 </head>
 <body class="font-sans antialiased bg-gray-50">
 
@@ -32,7 +37,9 @@
     <!-- Footer -->
     @include('partials.footer')
 
-    <!-- Scripts -->
-    @vite('resources/js/app.js')
+    <!-- Scripts (Vite with fallback no-op if manifest is missing) -->
+    @if ($hasVite)
+        @vite('resources/js/app.js')
+    @endif
 </body>
 </html>
