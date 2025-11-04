@@ -39,7 +39,7 @@ RUN if [ ! -f .env ]; then cp .env.example .env; fi
 # Generate application key
 RUN php artisan key:generate
 
-# Set Apache DocumentRoot to Laravel public folder
+# ✅ Set Apache DocumentRoot to Laravel public folder
 RUN sed -i 's|/var/www/html|/var/www/html/public|g' /etc/apache2/sites-available/000-default.conf
 
 # Expose port 80 and start Apache
