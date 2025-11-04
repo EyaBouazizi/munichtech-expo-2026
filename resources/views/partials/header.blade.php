@@ -1,9 +1,9 @@
-<nav class="bg-white shadow-lg sticky top-0 z-50" x-data="{ mobileMenuOpen: false }">
+<nav class="bg-white shadow-lg sticky top-0 z-50" x-data="{ mobileMenuOpen: true }">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center h-16">
             <!-- Logo -->
             <div class="flex-shrink-0">
-                <a href="{{ route('home') }}" class="text-2xl font-bold bg-gradient-to-r from-primary-600 to-indigo-600 bg-clip-text text-transparent hover:from-primary-700 hover:to-indigo-700 transition-all duration-300">
+                <a href="{{ route('home') }}" class="text-2xl font-bold bg-gradient-to-r from-primary-600 to-indigo-600 bg-clip-text text-primary hover:from-primary-700 hover:to-indigo-700 transition-all duration-300">
                     MunichTech EXPO 2026
                 </a>
             </div>
