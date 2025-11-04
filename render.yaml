@@ -1,9 +1,0 @@
-services:
-  - type: web
-    name: munichtech-expo-2026
-    env: docker
-    dockerfilePath: Dockerfile
-    # Render will set this automatically
-    # to the port your container should listen on
-    plan: free
-    autoDeploy: true

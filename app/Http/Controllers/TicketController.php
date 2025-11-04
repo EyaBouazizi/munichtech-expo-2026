@@ -10,7 +10,16 @@ class TicketController extends Controller
     // Show the ticket form
     public function create()
     {
-        return view('tickets.create');
+        $tickets = [
+            ['type' => 'Expo Visitor Pass', 'price' => 249],
+            ['type' => 'General Pass', 'price' => 799],
+            ['type' => 'Startup Pass', 'price' => 999],
+            ['type' => 'Investor Pass', 'price' => 1499],
+            ['type' => 'VIP Executive Pass', 'price' => 2499],
+            ['type' => 'Researchers / Students / Job Seekers', 'price' => 99],
+        ];
+
+        return view('tickets.create', compact('tickets'));
     }
 
     // Handle form submission
