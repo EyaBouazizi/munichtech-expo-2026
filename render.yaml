@@ -1,7 +1,8 @@
 services:
   - type: web
     name: munichtech-expo-2026
-    env: php
+    # Use Node runtime because free tier doesn't offer PHP
+    env: node
     buildCommand: composer install --no-dev --optimize-autoloader && npm ci && npm run build
     startCommand: php artisan serve --host=0.0.0.0 --port=$PORT
     envVars:
@@ -13,6 +14,8 @@ services:
         value: stderr
       - key: LOG_LEVEL
         value: error
+      - key: APP_URL
+        value: https://munichtech-expo-2026.onrender.com
     healthCheckPath: /
 
 databases:
@@ -20,4 +23,3 @@ databases:
     databaseName: munichtech_expo
     user: munichtech_user
     plan: free
-
