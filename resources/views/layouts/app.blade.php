@@ -21,7 +21,7 @@
     @if ($hasVite)
         @vite('resources/css/app.css')
     @else
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.13/dist/tailwind.min.css" />
+        <script src="https://cdn.tailwindcss.com"></script>
     @endif
 </head>
 <body class="font-sans antialiased bg-gray-50">
