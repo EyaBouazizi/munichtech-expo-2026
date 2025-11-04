@@ -1,6 +1,6 @@
-<nav class="bg-white shadow-lg sticky top-0 z-50" x-data="{ mobileMenuOpen: true }">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between items-center h-16">
+<nav class="bg-white shadow-lg sticky top-0 z-50" x-data="{ mobileMenuOpen: false }">
+    <div class="w-full">
+       <div class="flex justify-between items-center h-16">
             <!-- Logo -->
             <div class="flex-shrink-0">
                 <a href="{{ route('home') }}" class="text-2xl font-bold bg-gradient-to-r from-primary-600 to-indigo-600 bg-clip-text text-primary hover:from-primary-700 hover:to-indigo-700 transition-all duration-300">
@@ -25,12 +25,12 @@
             </div>
 
             <!-- CTA Button & Mobile Menu Button -->
-            <div class="flex items-center space-x-4">
+             <!--<div class="flex items-center space-x-4">
                 <a href="{{ route('tickets.page') }}" class="hidden lg:block btn btn-primary">
                     Get Tickets
                 </a>
                 
-                <!-- Mobile menu button -->
+                 Mobile menu button 
                 <button @click="mobileMenuOpen = !mobileMenuOpen" class="lg:hidden p-2 rounded-md text-gray-700 hover:text-primary-600 hover:bg-primary-50 focus:outline-none focus:ring-2 focus:ring-primary-500 transition-colors">
                     <svg x-show="!mobileMenuOpen" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
@@ -39,7 +39,7 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                     </svg>
                 </button>
-            </div>
+            </div>-->
         </div>
     </div>
 
