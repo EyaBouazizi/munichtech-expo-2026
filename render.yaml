@@ -1,0 +1,25 @@
+services:
+  - type: web
+    name: munichtech-expo-2026
+    env: docker
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    envVars:
+      - key: APP_ENV
+        value: production
+      - key: APP_DEBUG
+        value: false
+      - key: LOG_CHANNEL
+        value: stderr
+      - key: LOG_LEVEL
+        value: error
+      - key: APP_URL
+        value: https://munichtech-expo-2026.onrender.com
+        sync: false
+    healthCheckPath: /
+
+databases:
+  - name: munichtech-expo-db
+    databaseName: munichtech_expo
+    user: munichtech_user
+    plan: free
