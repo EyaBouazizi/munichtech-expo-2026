@@ -8,8 +8,8 @@
     
     <title>@yield('title', 'MunichTech EXPO 2026')</title>
 
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" />
+    <!-- Favicon (force HTTPS to avoid mixed content) -->
+    <link rel="shortcut icon" href="{{ secure_asset('favicon.ico') }}" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
