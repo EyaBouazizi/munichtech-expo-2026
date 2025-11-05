@@ -22,12 +22,17 @@
                     
                     <!-- Mobile Text (Compact) -->
                     <div class="sm:hidden">
-                        <span class="text-lg font-black bg-gradient-to-r from-primary-600 to-purple-600 bg-clip-text text-transparent">
-                            MT
-                        </span>
-                        <span class="text-xs font-bold text-gray-500 ml-0.5">
-                            '26
-                        </span>
+                       <div class="flex items-baseline space-x-1">
+                            <span class="text-xl font-black bg-gradient-to-r from-primary-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent group-hover:from-primary-700 group-hover:via-indigo-700 group-hover:to-purple-700 transition-all duration-300">
+                                Munich
+                            </span>
+                            <span class="text-xl font-black bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent group-hover:from-indigo-700 group-hover:to-purple-700 transition-all duration-300">
+                                Tech
+                            </span>
+                        </div>
+                        <div class="text-xs font-semibold text-gray-500 -mt-1 tracking-wider group-hover:text-primary-600 transition-colors">
+                            EXPO 2026
+                        </div>
                     </div>
                 </a>
             </div>
