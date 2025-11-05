@@ -10,7 +10,7 @@
                 <div class="bg-white shadow-lg rounded-2xl p-6 flex flex-col">
                     <h2 class="text-xl font-semibold mb-2 text-blue-500">{{ $sponsor['level'] }}</h2>
                     <p class="text-gray-700 mb-4">{{ $sponsor['description'] }}</p>
-                    <p class="text-gray-800 font-bold mb-4">€{{ number_format($sponsor['price'],0,',','.') }}</p>
+                    <p class="text-gray-800 font-bold mb-4">{{$sponsor['price']}}</p>
                     <a href="#become-sponsor-form" class="mt-auto px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">
                         Become a Sponsor
                     </a>

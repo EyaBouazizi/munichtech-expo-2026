@@ -52,14 +52,14 @@ class PageController extends Controller
     public function sponsors()
     {
     $sponsors = [
-        ['level' => 'Title Sponsor', 'price' => 120000, 'description' => 'Main sponsor with top visibility throughout the event.'],
-        ['level' => 'Platinum Sponsor', 'price' => 75000, 'description' => 'High visibility and priority placement for branding.'],
-        ['level' => 'Gold Sponsor', 'price' => 45000, 'description' => 'Prominent presence in main event zones and materials.'],
-        ['level' => 'Silver Sponsor', 'price' => 25000, 'description' => 'Brand visibility and select promotion opportunities.'],
-        ['level' => 'Bronze Sponsor', 'price' => 12000, 'description' => 'Support the event and gain moderate visibility.'],
-        ['level' => 'Track / Arena Sponsor', 'price' => 20000, 'description' => 'Sponsor a specific track or arena.'],
-        ['level' => 'Workshop Host', 'price' => 8000, 'description' => 'Host a workshop and showcase expertise.'],
-        ['level' => 'Startup Support Partner', 'price' => 5000, 'description' => 'Support startups with moderate branding exposure.'],
+        ['level' => 'Title Sponsor', 'price' => '€120000', 'description' => 'Main sponsor with top visibility throughout the event.'],
+        ['level' => 'Platinum Sponsor', 'price' => '€75000', 'description' => 'High visibility and priority placement for branding.'],
+        ['level' => 'Gold Sponsor', 'price' => '€45000', 'description' => 'Prominent presence in main event zones and materials.'],
+        ['level' => 'Silver Sponsor', 'price' => '€25000', 'description' => 'Brand visibility and select promotion opportunities.'],
+        ['level' => 'Bronze Sponsor', 'price' => '€12000', 'description' => 'Support the event and gain moderate visibility.'],
+        ['level' => 'Track / Arena Sponsor', 'price' => '€20000', 'description' => 'Sponsor a specific track or arena.'],
+        ['level' => 'Workshop Host', 'price' => '€8000', 'description' => 'Host a workshop and showcase expertise.'],
+        ['level' => 'Startup Support Partner', 'price' => '€5,000–€10,000', 'description' => 'Support startups with moderate branding exposure.'],
     ];
 
     return view('pages.sponsors', compact('sponsors'));
