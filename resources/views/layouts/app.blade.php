@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
     <meta name="description" content="MunichTech EXPO 2026 - Europe's Innovation Gateway" />
     <meta name="author" content="MunichTech EXPO" />
-    
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <title>@yield('title', 'MunichTech EXPO 2026')</title>
 
     <!-- Favicon (force HTTPS to avoid mixed content) -->
@@ -35,7 +35,7 @@
 <script src="https://cdn.tailwindcss.com"></script>
     @endif
 </head>
-<body class="font-sans antialiased bg-blue-600">
+<body class="font-sans antialiased bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-800 min-h-screen" style="margin:0 ; padding:0">
 
     <!-- Header -->
     @include('partials.header')

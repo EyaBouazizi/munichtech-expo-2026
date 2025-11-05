@@ -1,5 +1,5 @@
 <nav class="bg-white shadow-lg sticky top-0 z-50" x-data="{ mobileMenuOpen: false }">
-    <div class="w-full">
+    <div class="w-full px-4 sm:px-6 lg:px-8">
        <div class="flex justify-between items-center h-16">
             <!-- Logo -->
             <div class="flex-shrink-0">
@@ -9,7 +9,7 @@
             </div>
 
             <!-- Desktop Navigation -->
-            <div class="hidden lg:flex lg:items-center lg:space-x-1">
+            <div class="hidden lg:flex lg:items-center">
                 <a href="{{ route('home') }}" class="px-4 py-2 text-gray-700 hover:text-primary-600 hover:bg-primary-50 rounded-lg transition-colors duration-200 font-medium">Home</a>
                 <a href="{{ route('about') }}" class="px-4 py-2 text-gray-700 hover:text-primary-600 hover:bg-primary-50 rounded-lg transition-colors duration-200 font-medium">About</a>
                 <a href="{{ route('event.details') }}" class="px-4 py-2 text-gray-700 hover:text-primary-600 hover:bg-primary-50 rounded-lg transition-colors duration-200 font-medium">Event Details</a>
@@ -25,21 +25,21 @@
             </div>
 
             <!-- CTA Button & Mobile Menu Button -->
-             <!--<div class="flex items-center space-x-4">
-                <a href="{{ route('tickets.page') }}" class="hidden lg:block btn btn-primary">
+             <div class="flex items-center space-x-4">
+               <!-- <a href="{{ route('tickets.page') }}" class="hidden lg:block btn btn-primary">
                     Get Tickets
-                </a>
+                </a>-->
                 
-                 Mobile menu button 
-                <button @click="mobileMenuOpen = !mobileMenuOpen" class="lg:hidden p-2 rounded-md text-gray-700 hover:text-primary-600 hover:bg-primary-50 focus:outline-none focus:ring-2 focus:ring-primary-500 transition-colors">
+                 <!--  Mobile menu button -->
+                <button @click="mobileMenuOpen = !mobileMenuOpen" type="button" class="lg:hidden p-2 rounded-md text-gray-700 hover:text-primary-600 hover:bg-primary-50 focus:outline-none focus:ring-2 focus:ring-primary-500 transition-colors">
                     <svg x-show="!mobileMenuOpen" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                     </svg>
-                    <svg x-show="mobileMenuOpen" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="display: none;">
+                    <svg x-show="mobileMenuOpen" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                     </svg>
                 </button>
-            </div>-->
+            </div>
         </div>
     </div>
 
@@ -51,8 +51,7 @@
          x-transition:leave="transition ease-in duration-150"
          x-transition:leave-start="opacity-100 translate-y-0"
          x-transition:leave-end="opacity-0 -translate-y-2"
-         class="lg:hidden border-t border-gray-200 bg-white"
-         style="display: none;">
+         class="lg:hidden border-t border-gray-200 bg-white">
         <div class="px-2 pt-2 pb-3 space-y-1">
             <a href="{{ route('home') }}" class="block px-3 py-2 text-gray-700 hover:text-primary-600 hover:bg-primary-50 rounded-md font-medium transition-colors">Home</a>
             <a href="{{ route('about') }}" class="block px-3 py-2 text-gray-700 hover:text-primary-600 hover:bg-primary-50 rounded-md font-medium transition-colors">About</a>
